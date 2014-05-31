@@ -5,9 +5,7 @@
  */
 package app;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.Arrays;
 
 /**
  *
@@ -20,21 +18,23 @@ public class App {
      */
     public static void main(String[] args) {
 
-        ArrayList<Point> punti = new ArrayList<Point>();
-        punti.add(new Point(43, 55));
-        punti.add(new Point(43, 2.2));
-        punti.add(new Point(43.3, 4));
-        punti.add(new Point(4, 11.1));
-        punti.add(new Point(13, 21));
-        punti.add(new Point(13, 22));
-        punti.add(new Point(1, 2));
+        Point[] punti = new Point[7];
+        
+        punti[0] = new Point(43, 8);
+        punti[1] = new Point(11, 7);
+        punti[2] = new Point(47, 42);
+        punti[3] = new Point(47, 1);
+        punti[4] = new Point(43, 12);
+        punti[5] = new Point(43.3, 4);
+        punti[6] = new Point(4, 11.1);
+        
 
         System.out.println("Punti:");
         for (Point p : punti) {
             System.out.println("\t" + p.toString());
         }
 
-        Collections.sort(punti);
+        Arrays.sort(punti);
 
         System.out.println("\nPunti ordinati:");
         for (Point p : punti) {
